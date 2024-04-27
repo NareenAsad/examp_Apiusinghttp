@@ -12,7 +12,6 @@ class ProductDetailPage extends StatefulWidget {
 
 class _ProductDetailPageState extends State<ProductDetailPage> {
   bool isFavorited = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,28 +51,25 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                 ),
               ),
               SizedBox(height: 20),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Text(
-                      widget.product.title,
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
+              Row(
+                children: [
+                  Text(
+                    widget.product.title,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
                     ),
-                    SizedBox(width: 50),
-                    Text(
-                      '${widget.product.discountPercentage}%',
-                      style: TextStyle(
-                        color: Colors.red,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
+                  ),
+                  SizedBox(width: 50),
+                  Text(
+                    '${widget.product.discountPercentage}%',
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
               SizedBox(height: 10),
               SingleChildScrollView(
@@ -168,9 +164,9 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                         fontSize: 16,
                       ),
                     ),
-                  )
+                  ),
                 ],
-              )
+              ),
             ],
           ),
         ),

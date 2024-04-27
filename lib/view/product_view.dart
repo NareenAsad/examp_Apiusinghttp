@@ -64,8 +64,11 @@ class _ProductListPageState extends State<ProductListPage> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(width: 200),
-            Icon(Icons.shopping_bag_outlined),
+            SizedBox(width: 180),
+            IconButton(
+              icon: Icon(Icons.shopping_bag_outlined),
+              onPressed: () {},
+            ),
           ],
         ),
       ),
