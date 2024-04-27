@@ -1,5 +1,4 @@
 import 'package:examp_api_using_http/models/product.model.dart';
-import 'package:examp_api_using_http/view/productdetail_view.dart';
 import 'package:flutter/material.dart';
 
 class SearchBarWidget extends StatelessWidget {
