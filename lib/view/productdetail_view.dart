@@ -143,7 +143,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                 widget.product.description,
                 style: TextStyle(fontSize: 18),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 50),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
