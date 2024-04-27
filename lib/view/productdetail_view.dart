@@ -1,5 +1,7 @@
+import 'package:examp_api_using_http/controller/provider/cart_provider.dart';
 import 'package:examp_api_using_http/models/product.model.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ProductDetailPage extends StatefulWidget {
   final ProductElement product;
@@ -151,7 +153,11 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      final cartProvider =
+                          Provider.of<Cart>(context, listen: false);
+                      cartProvider.addToCart(widget.product);
+                    },
                     style: ElevatedButton.styleFrom(
                       padding:
                           EdgeInsets.symmetric(horizontal: 50, vertical: 18),

@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:examp_api_using_http/view/cart_view.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:examp_api_using_http/models/product.model.dart';
@@ -67,7 +68,14 @@ class _ProductListPageState extends State<ProductListPage> {
             SizedBox(width: 180),
             IconButton(
               icon: Icon(Icons.shopping_bag_outlined),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AddToCartPage(products: []),
+                  ),
+                );
+              },
             ),
           ],
         ),
